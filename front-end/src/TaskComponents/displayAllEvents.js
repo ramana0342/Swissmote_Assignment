@@ -14,7 +14,7 @@ function DisplayAllPost() {
 
    useEffect(()=>{
 
-    axios.get("http://localhost:8080/getAllEventsData").then((res)=>{
+    axios.get("https://swissmote-assignment.onrender.com/getAllEventsData").then((res)=>{
          //console.log(res.data.allPostsData)
          setAllPostData(res.data.allEventsData)
           setAllComentsData(res.data.allCommentsData)
@@ -33,7 +33,7 @@ function DisplayAllPost() {
     }
 
     if(token){
-           axios.post(`http://localhost:8080/postComment/${id}`,commentContent,{headers}).then((res)=>{
+           axios.post(`https://swissmote-assignment.onrender.com/postComment/${id}`,commentContent,{headers}).then((res)=>{
                  console.log(res)
                  if(res.status==201){
                     setAllComentsData([res.data.CreatedCommentResult,...allCommentsData])

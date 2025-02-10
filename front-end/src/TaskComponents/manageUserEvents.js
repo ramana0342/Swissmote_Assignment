@@ -13,7 +13,7 @@ function ManageUserPost() {
           "Authorization": `${token}`
       }
       if(token){
-        axios.get("http://localhost:8080/getLoginUserEventsData",{headers}).then((res)=>{
+        axios.get("https://swissmote-assignment.onrender.com/getLoginUserEventsData",{headers}).then((res)=>{
           setUserPostsData(res.data.userEventsData )
          // console.log(res.data.userPostsData)
         })
@@ -83,7 +83,7 @@ function ManageUserPost() {
           //  console.log(imageURL)
           setPostData((prevData)=> ({...prevData,Photo:imageURL}))
            
-           axios.post("http://localhost:8080/createEvent",{...postData,eventImage:imageURL},{headers}).then((res)=>{
+           axios.post("https://swissmote-assignment.onrender.com/createEvent",{...postData,eventImage:imageURL},{headers}).then((res)=>{
             console.log(res)
                if(res.status==201){
                 setPostData({eventName:"",eventDescription:"",eventImage:""})
@@ -104,7 +104,7 @@ function ManageUserPost() {
         
       }else{
 
-      axios.post("http://localhost:8080/createEvent",postData,{headers}).then((res)=>{
+      axios.post("https://swissmote-assignment.onrender.com/createEvent",postData,{headers}).then((res)=>{
         console.log(res)
            if(res.status==201){
             setPostData({eventName:"",eventDescription:"",eventImage:""})
@@ -127,7 +127,7 @@ function ManageUserPost() {
 
  const deletePostFun = (id)=>{
             
-      axios.delete(`http://localhost:8080/deleteUserEvent/${id}`).then((res)=>{
+      axios.delete(`https://swissmote-assignment.onrender.com/deleteUserEvent/${id}`).then((res)=>{
              // console.log(res)
             if(res.status==201){
               setDeleteBtnStatus()
@@ -158,7 +158,7 @@ const updatePostFun = (e) => {
       "Authorization": `${token}`
   }
 
-  axios.put("http://localhost:8080/editUserEvent",editPostData,{headers}).then((res)=>{
+  axios.put("https://swissmote-assignment.onrender.com/editUserEvent",editPostData,{headers}).then((res)=>{
        if(res.status==201){
         setUserPostsData((prev)=>prev.map((post,i)=> post._id === editPostData._id ? res.data.editedeventData : post ));
         setIsEditModalVisible(false);

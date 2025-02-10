@@ -25,7 +25,7 @@ const UserRegister = () => {
 
   const SignUpBtnEvent = () => {
     setBtnStatus(true)
-    axios.post("http://localhost:8080/userSignUp", userData).then((res) => {
+    axios.post("https://swissmote-assignment.onrender.com/userSignUp", userData).then((res) => {
       console.log(res)
       if (res.data.Success) {
         setError(null)

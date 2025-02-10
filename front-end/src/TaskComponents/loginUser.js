@@ -25,7 +25,7 @@ const UserLogin = ({ LoginStatus, setLoginStatus }) => {
 
   const LoginEvent = () => {
     setloginBtnstatus(true)
-    axios.post("http://localhost:8080/userLogin", userLogin).then((res) => {
+    axios.post("https://swissmote-assignment.onrender.com/userLogin", userLogin).then((res) => {
      // console.log(res.data.Token)
       if (res.data.Success) {
         setLoginError("")
