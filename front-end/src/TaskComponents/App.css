@@ -1,0 +1,211 @@
+
+.navBar{
+    width: 100%;
+    padding: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:lightblue;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.navLink{
+    text-decoration: none;
+    color: black;
+     font-size: larger;
+}
+
+.active{
+     color:darkred;
+    
+}
+.active:hover{
+    cursor: not-allowed;
+}
+
+
+
+.signUpForm{
+    display: flex;
+    justify-content: center ;
+    height: 100vh;
+    align-items: center;
+    background-color: antiquewhite;
+}
+.form{
+    border: 1px solid black;
+    padding: 10px 40px;
+    background-color:burlywood;
+    box-shadow:50px 50px 100px rgb(0, 0, 0) 
+}
+input{
+    padding: 5px;
+    margin: 5px 0px;
+}
+.SignUpBtn{
+    display: flex;
+    justify-content: center;
+}
+.signBtn{
+    width :150px;
+    margin-top: 10px;
+    color: aquamarine;
+}
+
+
+/*  Login Form */
+
+
+.Logincontainer{
+    display: flex;
+    justify-content: center ;
+    height: 100vh;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+.Loginform{
+    border: 1px solid black;
+    padding: 40px;
+    background-color:lemonchiffon;
+    box-shadow:50px 50px 100px rgb(0, 0, 0) 
+}
+input{
+    padding: 5px;
+    margin: 5px 0px;
+}
+.Login-btn{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+#inputFields{
+    padding-top: 40px;
+    width:400px;
+    position: fixed;
+}
+
+.CreatePostContainer{
+     padding-top: 60px;
+     width: 100%;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+}
+
+.createPostInputDiv{
+    width: 30%;
+    
+}
+
+.displayUserPostsContainer{
+      padding: 20px 40px;
+}
+
+
+.editPostModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .displayallPostsContainer{
+    padding: 70px 40px;
+  }
+
+  .CommentsContainer{
+       
+       border: 2px solid black;
+       border-radius: 5px;
+       margin: 7px 20px ;
+       min-height: 20px;
+  }
+
+  .CommentsContainer input{
+       height: 25px;
+  }
+  .CommentsContainer button{
+    height: 25px;
+}
+  
+
+
+
+
+
+
+
+@media(max-width:450px){
+
+    #inputFields{
+        padding-top: 40px;
+        width:330px;
+        position: fixed;
+    }
+    .navBar{
+            flex-direction: column;
+    }
+    .navLink{
+        width: 100%;
+        border-bottom: 2px solid black;
+        text-align: center;
+    }
+    .navLink:hover{
+        background-color: black;
+        color: white;
+    }
+    .active:hover{
+          color: darkred;
+    }
+    .displayallPostsContainer{
+        padding-top: 150px;
+    }
+    .Logincontainer{
+        padding-top: 150px;
+    }
+    .signUpForm{
+        padding-top: 150px;
+    }
+    .CreatePostContainer{
+        padding-top: 150px;
+    }
+    .createPostInputDiv{
+        width: 80%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
